@@ -8,9 +8,19 @@
 	</head>
 	<body>
 		<a-scene>
-			<a-box color="#6173F4" width="1" height="1" rotation = "0 0 45" scale="2 0.5 3" depth="2"></a-box>
-		
-		<a-entity position="0 0 3.8">
+			<a-circle position="0 3.2 0" radius="1" color="#F16745" rotation="0 0 45"
+                    roughness="0.8" width-segments="52" height-segments="52">
+            	<a-animation attribute="rotation" repeat="indefinite" to="0 360 0" easing="linear"></a-animation>
+            	<a-animation attribute="material.color" from="#F16745" to="red" dur="1000"></a-animation>  
+            	<!--a-animation attribute="visible" duration="5000" to="false"></a-animation-->       	
+            </a-circle>
+            <a-circle position="0 1.2 0" radius="1" color="#0000FF" rotation="0 0 -90">
+            	<a-animation attribute="rotation" repeat="indefinite" to="0 360 0" easing="linear"></a-animation>   
+            	<!--a-animation attribute="visible" duration="5000" to="false"></a-animation-->       	
+            </a-circle>
+
+
+		<a-entity position="0 0 4.8">
         	<a-camera></a-camera>
      	</a-entity>
 		</a-scene>
